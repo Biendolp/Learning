@@ -26,11 +26,25 @@ console.log("Smallest: ", temp)
 
 let stringOne = "sdrawkcaB sI gnirtS sihT"
 let stringTwo = ""
+let stringThree = "gnirtS sdrawkcaB rehtonA"
+let stringFour = ""
 
 console.log("Starting String: ", stringOne)
 
+//Simple reverse using basic fundamentals
 for (let i=stringOne.length - 1; i >= 0; i--){
     stringTwo += stringOne[i]
 }
 
 console.log("Reversed String: ", stringTwo)
+
+console.log("Starting String 2: ", stringThree)
+
+//More complex reverse using built in JS functions.
+stringFour = stringThree.split("").reverse().join("")
+
+//.split("") Turns string into array, each letter being an index
+//.reverse() reverses the array
+//.join("") Turns the indexed items in the array together into one, starting from index 0 -> the end
+
+console.log("Reversed String 2: ", stringFour)
