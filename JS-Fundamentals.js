@@ -70,8 +70,8 @@ movie["rating"] = 9.7
 movie["watched"] = true
 
 // 3. Rating conditional
-function CheckRating(){
-  if (movie["rating"] >= 7){
+function CheckRating(m){
+  if (m["rating"] >= 7){
     console.log("This is a good movie")
   } else {
     console.log("Might not be the best movie")
@@ -79,26 +79,26 @@ function CheckRating(){
 }
 
 // 4. Update rating function (maybe)
-function UpdateRating(newRating){
+function UpdateRating(m, newRating){
   if(isNaN(newRating)){
-    console.log("Wrong Data type, Set rating to a #")
+    console.log("Wrong Data type, Set rating to a #. Rating was not changed!")
   } else {
-    movie.rating = newRating
+    m.rating = newRating
   }
 }
 
 //Log base object
 console.log(movie)
-CheckRating()
+CheckRating(movie)
 console.log("")
 
 //log updated rating and check rating
-UpdateRating(5.7654)
+UpdateRating(movie, 5.7654)
 console.log(movie)
-CheckRating()
+CheckRating(movie)
 console.log("")
 
 //log with bad rating update (works, doesnt change rating if not a number)
-UpdateRating("John")
+UpdateRating(movie, "John")
 console.log(movie)
-CheckRating()
+CheckRating(movie)
