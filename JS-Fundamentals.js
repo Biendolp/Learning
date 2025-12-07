@@ -102,3 +102,34 @@ console.log("")
 UpdateRating(movie, "John")
 console.log(movie)
 CheckRating(movie)
+
+console.log("")
+console.log("")
+
+
+//Function to create a movie object
+function CreateMovie(title, director, year, rating, watched) {
+  if (typeof title !== "string") {
+    console.log("Title must be a string");
+    return
+  }
+  if (typeof director !== "string") {
+    console.log("Director must be a string");
+    return
+  }
+  if (typeof year !== "number") {
+    console.log("Year must be a number");
+    return
+  }
+  if (typeof rating !== "number") {
+    console.log("Rating must be a number");
+    return
+  }
+  if (typeof watched !== "boolean") {
+    console.log("Watched must be a boolean");
+    return
+  }
+
+  return {title, director, year, rating, watched}
+}
+
