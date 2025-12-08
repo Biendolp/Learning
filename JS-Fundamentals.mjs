@@ -1,5 +1,7 @@
 // JS Fundamentals practice
 
+import { Film } from "./Film.mjs";
+
 // Find largest and smallest number in array
 
 let numbers = [1, 100, 30, 204, 6, 35, 76, 3546, 34, 300, 1, -13, -100000]
@@ -132,4 +134,15 @@ function CreateMovie(title, director, year, rating, watched) {
 
   return {title, director, year, rating, watched}
 }
+
+let movie2 = CreateMovie("John Wick", "Adam Sandler", 2015, 9.4, false)
+console.log(`Movie 2: `, movie2)
+console.log("")
+console.log("")
+
+
+// Using exported class from Film.js to do the same thing the OOP way.
+
+let testFilm = new Film("Test Name", "Test Director", 2222, 22)
+console.log("Test Film: ", testFilm)
 
